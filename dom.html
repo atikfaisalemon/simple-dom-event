@@ -6,20 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explor dom</title>
     <style>
-        
+        article {
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 5px;
+        }
     </style>
 </head>
 <body>
     <section>
         <main>
-            <h1 id="first">Exploring dom</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae odit ad distinctio necessitatibus excepturi rerum, dolores error earum, et assumenda aperiam incidunt labore id eius minus aut harum quae optio.</p>
+            <h1>Exploring dom</h1>
+           <article>
+               <h3>article-1</h3>
+               <p class="author">author-1</p>
+               <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam odit facere neque minima quis facilis nobis sed, rem repudiandae excepturi. Neque dolorem suscipit sapiente! Delectus amet praesentium repudiandae quas exercitationem?</p>
+           </article>
+           <article>
+               <h3>article-2</h3>
+               <p class="author">author-2</p>
+               <p class="des">Praesentium perferendis voluptatibus maiores, aliquam et ullam sapiente beatae corporis reiciendis adipisci consectetur exercitationem sed quis sequi facilis temporibus consequuntur eum molestias laudantium, eius nam modi? Quos molestiae quo voluptatum.</p>
+           </article>
+           <article>
+               <h3>article-3</h3>
+               <p class="author">author-3</p>
+               <p class="des">Recusandae perspiciatis earum eius molestiae, hic delectus similique architecto in voluptas ipsam corporis necessitatibus laborum, qui incidunt molestias. Maiores labore minus expedita, alias eos cupiditate veritatis quasi distinctio quam necessitatibus.</p>
+           </article>
         </main>
 
         <script>
-            var first = document.getElementById('first');
-            first.style.color = 'green'
-            first.style.backgroundColor = 'red'
+           var authors = document.getElementsByClassName('author');
+           for (var i=0; i<authors.length; i++ ){
+               var element = authors[i];
+               element.innerHTML = 'kobi-' + (i+1);
+               element.style.backgroundColor = 'lightgray';
+               element.style.margin = '10px'
+
+           }
         </script>
     </section>
     
