@@ -19,12 +19,12 @@
         <main>
             <h1>Exploring dom</h1>
            <article>
-               <h3>article-1</h3>
+               <h3 id="newThing">article-1</h3>
                <p class="author">author-1</p>
                <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam odit facere neque minima quis facilis nobis sed, rem repudiandae excepturi. Neque dolorem suscipit sapiente! Delectus amet praesentium repudiandae quas exercitationem?</p>
            </article>
            <article>
-               <h3>article-2</h3>
+               <h3 >article-2</h3>
                <p class="author">author-2</p>
                <p class="des">Praesentium perferendis voluptatibus maiores, aliquam et ullam sapiente beatae corporis reiciendis adipisci consectetur exercitationem sed quis sequi facilis temporibus consequuntur eum molestias laudantium, eius nam modi? Quos molestiae quo voluptatum.</p>
            </article>
@@ -36,6 +36,11 @@
         </main>
 
         <script>
+            const article = document.getElementById('newThing');
+           const newParagraph = document.createElement('p');
+           newParagraph.innerHTML = 'Created by new thing';
+           article.appendChild(newParagraph);
+
            var authors = document.getElementsByClassName('author');
            for (var i=0; i<authors.length; i++ ){
                var element = authors[i];
@@ -44,6 +49,8 @@
                element.style.margin = '10px'
 
            }
+           
+
         </script>
     </section>
     
